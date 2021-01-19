@@ -53,10 +53,10 @@ php artisan migrate
             ->pay();
   
     // Pasargad Driver
-    $transaction = Transaction::driver('callback_pasargad')
+    $transaction = Transaction::driver('pasargad')
             ->amount(2000)
             ->orderId(2000)
-            ->callbackUrl('callback_url')
+            ->callbackUrl('callback_pasargad')
             ->pay();
 
     ```
