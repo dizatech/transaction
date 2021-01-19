@@ -1,0 +1,34 @@
+{
+    "name": "dizatech/transaction",
+    "type": "library",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vahid Ashourzadeh",
+            "email": "v.ashourzadeh@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "7.1.*|7.2.*|7.3.*|7.4.*",
+        "laravel/framework": "7.*|8.*",
+        "dizatech/parsian_ipg": "^0.1.1",
+        "dizatech/pasargad_ipg": "^0.1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dizatech\\Transaction\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dizatech\\Transaction\\TransactionServiceProvider"
+            ],
+            "aliases": {
+                "Transaction" : "Dizatech\\Transaction\\Facades\\Transaction"
+            }
+        }
+    }
+}

@@ -2,6 +2,8 @@
 
 namespace Dizatech\Transaction;
 
+use Dizatech\Transaction\Core\TransactionManager;
+use Dizatech\Transaction\Facades\Transaction;
 use Illuminate\Support\ServiceProvider;
 
 class TransactionServiceProvider extends ServiceProvider
@@ -13,7 +15,7 @@ class TransactionServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        Transaction::shouldProxyTo(TransactionManager::class);
     }
 
     /**
