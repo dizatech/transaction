@@ -26,5 +26,9 @@ class TransactionServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+
+        $this->publishes([
+            __DIR__.'/config/dizatech_transaction.php' =>config_path('dizatech_transaction.php')
+        ], 'dizatech_transaction');
     }
 }
