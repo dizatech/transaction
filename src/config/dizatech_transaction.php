@@ -37,7 +37,7 @@ return [
                 'private_key'   => ''
             ],
             'options' => [
-                'verifySSL' => FALSE
+                'verifySSL' => true
             ]
         ],
     ],
