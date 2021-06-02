@@ -16,13 +16,19 @@ class Parsian extends Driver
         $class = new ParsianIpg($this->getInformation());
         $result = $class->paymentRequest($amount, $transaction->id, $callbackUrl);
 
-        if( $result->status == 'success' ) {
+        if(isset($detail['auto_redirect']) && $detail['auto_redirect'] == false && $result->status == 'success') {
+            $result->token  = $result->token;
+            $result->url    = 'https://pec.shaparak.ir/NewIPG/?Token=' . $result->token;
+            return $result;
+
+        } elseif($result->status == 'success') {
             $this->updateTransactionData($transaction->id, ['token' => $result->token]);
             header( 'Location: https://pec.shaparak.ir/NewIPG/?Token=' . $result->token );
             die();
-        } else {
-            return $result;
+
         }
+
+        return $result;
     }
 
     public function verify($request)

@@ -18,13 +18,19 @@ class Pasargad extends Driver
 
         $result = $class->getToken( $amount, $transaction->id, $transaction->created_at->format('Y/m/d H:i:s'), $callbackUrl );
 
-        if( $result->status == 'success' ) {
+        if(isset($detail['auto_redirect']) && $detail['auto_redirect'] == false && $result->status == 'success') {
+            $result->token  = $result->token;
+            $result->url    = 'https://pep.shaparak.ir/payment.aspx?n=' . $result->token;
+            return $result;
+
+        } elseif($result->status == 'success') {
             $this->updateTransactionData($transaction->id, ['token' => $result->token]);
             header( 'Location: https://pep.shaparak.ir/payment.aspx?n=' . $result->token );
             die();
-        } else {
-            return $result;
+
         }
+
+        return $result;
     }
 
     public function verify($request)

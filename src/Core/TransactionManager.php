@@ -53,7 +53,7 @@ class TransactionManager
 
     public function amount($amount)
     {
-        $this->amount = $amount;
+        $this->amount = (int) $amount;
         return $this;
     }
 

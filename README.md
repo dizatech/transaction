@@ -50,6 +50,7 @@ php artisan migrate
             ->amount(2000)
             ->orderId(2000)
             ->callbackUrl('callback_parsian')
+              ->detail(['auto_redirect' => false]) // if we want to get {token, url} and not auto redirect to Bank Gateway.
             ->pay();
   
     // Pasargad Driver
@@ -57,6 +58,7 @@ php artisan migrate
             ->amount(2000)
             ->orderId(2000)
             ->callbackUrl('callback_pasargad')
+            ->detail(['auto_redirect' => false]) // if we want to get {token, url} and not auto redirect to Bank Gateway.
             ->pay();
 
     ```
