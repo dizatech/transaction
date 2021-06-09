@@ -42,7 +42,7 @@ class Pasargad extends Driver
 
         if ($check->status == 'success') {
             $transaction = $this->getTransaction($request['iN']);
-            $result = $class->verifyTransaction($transaction->amount, $request['iN'], $request['iD']);
+            $result = $class->verifyTransaction( (int) $transaction->amount, $request['iN'], $request['iD'] );
 
             if ($result->status == 'success') {
                 $this->updateTransactionData($request['iN'], ['status' => 'successful', 'ref_no' => $request['tref']]);
