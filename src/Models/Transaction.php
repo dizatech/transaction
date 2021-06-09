@@ -10,4 +10,9 @@ class Transaction extends Model
     use HasFactory;
 
     protected $fillable = ['order_id', 'status', 'amount', 'driver', 'ref_no', 'token'];
+
+    public function parent()
+    {
+        return $this->belongsTo( config('dizatech_transaction.model'), 'order_id' );
+    }
 }

@@ -55,4 +55,14 @@ return [
         'parsian' => \Dizatech\Transaction\Drivers\Parsian::class,
         'pasargad' => \Dizatech\Transaction\Drivers\Pasargad::class
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | A Model that has relation with transaction, Order or Payment or ..
+    |--------------------------------------------------------------------------
+    |
+    | Set the namespace of your model that has relation with Transaction.
+    |
+    */
+    'model' => ''
 ];

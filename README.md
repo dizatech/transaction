@@ -50,7 +50,7 @@ php artisan migrate
             ->amount(2000)
             ->orderId(2000)
             ->callbackUrl('callback_parsian')
-              ->detail(['auto_redirect' => false]) // if we want to get {token, url} and not auto redirect to Bank Gateway.
+            ->detail(['auto_redirect' => false]) // if we want to get {token, url} and not auto redirect to Bank Gateway.
             ->pay();
   
     // Pasargad Driver
@@ -100,6 +100,15 @@ php artisan migrate
     $order->failedTransactions; // get the failed transactions for this order
     $order->refundedTransactions; // get the refunded transactions for this order
     
+    ```
+- Get the parent of a transaction or this transaction belongs to which model
+
+    ```
+    // Set the namespace of your model in /config/dizatech_transaction.php
+    'model' => 'App\Models\Order'
+
+    // Use relation for get a parent of this transaction
+    $transaction->parent;
     ```
 
 #### Requirements:
