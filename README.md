@@ -1,8 +1,10 @@
 # Laravel Payment Package For Iranian Bank Gateways
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/dizatech/transaction.svg?style=flat-square)](https://packagist.org/packages/dizatech/transaction)
 [![GitHub issues](https://img.shields.io/github/issues/dizatech/transaction?style=flat-square)](https://github.com/dizatech/transaction/issues)
 [![GitHub stars](https://img.shields.io/github/stars/dizatech/transaction?style=flat-square)](https://github.com/dizatech/transaction/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/dizatech/transaction?style=flat-square)](https://github.com/dizatech/transaction/network)
 [![GitHub license](https://img.shields.io/github/license/dizatech/transaction?style=flat-square)](https://github.com/dizatech/transaction/blob/master/LICENSE)
+[![Total Downloads](https://img.shields.io/packagist/dt/dizatech/transaction.svg?style=flat-square)](https://packagist.org/packages/dizatech/transaction)
 
 This is a Laravel Package for Payment Gateway Integration.
 
