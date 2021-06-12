@@ -6,16 +6,21 @@
 
 This is a Laravel Package for Payment Gateway Integration.
 
-#### List of available drivers
+#### <g-emoji class="g-emoji" alias="gem" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f48e.png">💎</g-emoji> List of available drivers
 
-- [parsian](https://www.pec.ir/)
-- [pasargad](https://bpi.ir/)
+<p>
+<g-emoji class="g-emoji" alias="small_blue_diamond" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f539.png">🔹</g-emoji> [parsian](https://www.pec.ir/)
+</p>
+<p>
+<g-emoji class="g-emoji" alias="small_blue_diamond" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f539.png">🔹</g-emoji> [pasargad](https://bpi.ir/)
+</p>
+
 
 ## How to install and config [dizatech/transaction](https://github.com/dizatech/transaction) package?
 
 #### Installation
 
-```
+```bash
 
 composer require dizatech/transaction
 
@@ -23,7 +28,7 @@ composer require dizatech/transaction
 
 #### Publish Config file
 
-```
+```php
 
 php artisan vendor:publish --tag=dizatech_transaction
 
@@ -31,7 +36,7 @@ php artisan vendor:publish --tag=dizatech_transaction
 
 #### Migrate tables, to add transactions table to database
 
-```
+```php
 
 php artisan migrate
 
@@ -43,8 +48,9 @@ php artisan migrate
 
 - Use this sample code for Request Payment 
 
-    ```
-
+    ```php
+    <?php
+  
     // Parsian Driver
     $transaction = Transaction::driver('parsian')
             ->amount(2000)
@@ -65,7 +71,8 @@ php artisan migrate
   
 - Use this sample code for Verify Payment
 
-    ```
+    ```php
+    <?php
 
     // Parsian Driver, that use POST type
     Route::post('/callback_parsian', function () {
@@ -81,7 +88,9 @@ php artisan migrate
 
 - Use this Trait in you'r Model (for example Payment, Invoice, Order, ...) that has many transactions and has relation with Transaction Model
 
-    ```
+    ```php
+  <?php
+  
     // Use the Trait
     use Illuminate\Database\Eloquent\Factories\HasFactory;
     use Illuminate\Database\Eloquent\Model;
@@ -103,9 +112,11 @@ php artisan migrate
     ```
 - Get the parent of a transaction or this transaction belongs to which model
 
-    ```
+    ```php
+  <?php
+  
     // Set the namespace of your model in /config/dizatech_transaction.php
-    'model' => 'App\Models\Order'
+    'model' => 'App\Models\Order',
 
     // Use relation for get a parent of this transaction
     $transaction->parent;
