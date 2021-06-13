@@ -3,8 +3,10 @@
 [![GitHub issues](https://img.shields.io/github/issues/dizatech/transaction?style=flat-square)](https://github.com/dizatech/transaction/issues)
 [![GitHub stars](https://img.shields.io/github/stars/dizatech/transaction?style=flat-square)](https://github.com/dizatech/transaction/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/dizatech/transaction?style=flat-square)](https://github.com/dizatech/transaction/network)
-[![GitHub license](https://img.shields.io/github/license/dizatech/transaction?style=flat-square)](https://github.com/dizatech/transaction/blob/master/LICENSE)
 [![Total Downloads](https://img.shields.io/packagist/dt/dizatech/transaction.svg?style=flat-square)](https://packagist.org/packages/dizatech/transaction)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/dizatech/transaction/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/dizatech/transaction/?branch=main)
+[![Build Status](https://scrutinizer-ci.com/g/dizatech/transaction/badges/build.png?b=main)](https://scrutinizer-ci.com/g/dizatech/transaction/build-status/main)
+[![GitHub license](https://img.shields.io/github/license/dizatech/transaction?style=flat-square)](https://github.com/dizatech/transaction/blob/master/LICENSE)
 
 This is a Laravel Package for Payment Gateway Integration.
 
@@ -119,6 +121,27 @@ php artisan migrate
 
     // Use relation for get a parent of this transaction
     $transaction->parent;
+    ```
+  
+- Transaction model's data and appends
+
+    ```php
+  <?php
+  
+    // Default
+    $transaction->id;
+    $transaction->order_id;
+    $transaction->amount;
+    $transaction->driver;
+    $transaction->status;
+    $transaction->ref_no;
+    $transaction->token;
+    $transaction->created_at;
+    $transaction->updated_at;
+    // Appends
+    $transaction->gateway; // Label of driver 
+    $transaction->toman; // Get price to taman (convert rial to toman)
+    $transaction->status_label; // Label of status
     ```
 
 #### Requirements:
