@@ -19,19 +19,14 @@ class Transaction extends Model
 
     public function getGatewayAttribute()
     {
-        $label = '';
         switch ($this->driver) {
             case 'pasargad':
-                $label = 'بانک پاسارگاد';
-                break;
+                return 'بانک پاسارگاد';
             case 'parsian' :
-                $label = 'بانک پارسیان';
-                break;
+                return 'بانک پارسیان';
             default:
-                $label = 'نامشخص';
-
+                return 'نامشخص';
         }
-        return $label;
     }
 
     public function getTomanAttribute()
@@ -41,24 +36,17 @@ class Transaction extends Model
 
     public function getStatusLabelAttribute()
     {
-        $label = '';
         switch ($this->status) {
             case 'pending':
-                $label = 'در انتظار پرداخت';
-                break;
+                return 'در انتظار پرداخت';
             case 'failed':
-                $label = 'ناموفق';
-                break;
+                return 'ناموفق';
             case  'refunded':
-                $label = 'برگشت خورده';
-                break;
+                return 'برگشت خورده';
             case 'successful':
-                $label = 'موفقیت‌آمیز';
-                break;
-            case 'default':
-                $label = 'نامشخص';
-                break;
+                return 'موفقیت‌آمیز';
+            default:
+                return 'نامشخص';
         }
-        return $label;
     }
 }
