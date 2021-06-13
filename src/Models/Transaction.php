@@ -19,6 +19,7 @@ class Transaction extends Model
 
     public function getGatewayAttribute()
     {
+        $label = '';
         switch ($this->driver) {
             case 'pasargad':
                 $label = 'بانک پاسارگاد';
@@ -40,6 +41,7 @@ class Transaction extends Model
 
     public function getStatusLabelAttribute()
     {
+        $label = '';
         switch ($this->status) {
             case 'pending':
                 $label = 'در انتظار پرداخت';
