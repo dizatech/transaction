@@ -40,6 +40,11 @@ return [
                 'verifySSL' => true
             ]
         ],
+        'zarinpal' => [
+            'constructor' => [
+                'merchantId'    => ''
+            ]
+        ],
     ],
 
     /*
@@ -52,8 +57,9 @@ return [
     |
     */
     'drivers' => [
-        'parsian' => \Dizatech\Transaction\Drivers\Parsian::class,
-        'pasargad' => \Dizatech\Transaction\Drivers\Pasargad::class
+        'parsian'   => \Dizatech\Transaction\Drivers\Parsian::class,
+        'pasargad'  => \Dizatech\Transaction\Drivers\Pasargad::class,
+        'zarinpal'  => \Dizatech\Transaction\Drivers\Zarinpal::class,
     ],
 
     /*

@@ -16,6 +16,8 @@ This is a Laravel Package for Payment Gateway Integration.
 
 - [pasargad](https://bpi.ir/)
 
+- [zarinpal](https://www.zarinpal.com/)
+
 
 ## How to install and config [dizatech/transaction](https://github.com/dizatech/transaction) package?
 

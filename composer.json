@@ -14,7 +14,8 @@
         "php": "7.1.*|7.2.*|7.3.*|7.4.*",
         "laravel/framework": "7.*|8.*",
         "dizatech/parsian_ipg": "^0.1.1",
-        "dizatech/pasargad_ipg": "^0.1.2"
+        "dizatech/pasargad_ipg": "^0.1.2",
+        "dizatech/zarinpal_ipg": "^1.0"
     },
     "autoload": {
         "psr-4": {
