@@ -11,8 +11,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": "7.1.*|7.2.*|7.3.*|7.4.*",
-        "laravel/framework": "7.*|8.*",
+        "php": "7.1.*|7.2.*|7.3.*|7.4.*|^8.0.2",
+        "laravel/framework": "7.*|8.*|^9.0",
         "dizatech/parsian_ipg": "^0.1.1",
         "dizatech/pasargad_ipg": "^0.1.2",
         "dizatech/zarinpal_ipg": "^1.0"
