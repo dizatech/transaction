@@ -31,13 +31,13 @@ return [
             ]
         ],
         'pasargad' => [
-            'constructor' => [
-                'merchant_code' => '',
-                'terminal_code' => '',
-                'private_key'   => ''
+            'constructor'   => [
+                'username'          => env('PASARGAD_IPG_USERNAME'),
+                'password'          => env('PASARGAD_IPG_PASSWORD'),
+                'terminal_number'   => env('PASARGAD_IPG_TERMINAL'),
             ],
-            'options' => [
-                'verifySSL' => true
+            'options'       => [
+                'verifySSL'         => true
             ]
         ],
         'zarinpal' => [
