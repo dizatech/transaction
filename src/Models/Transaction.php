@@ -24,8 +24,10 @@ class Transaction extends Model
                 return 'بانک پاسارگاد';
             case 'parsian' :
                 return 'بانک پارسیان';
+            case 'zarinpal' :
+                return 'زرین پال';
             default:
-                return 'نامشخص';
+                return $this->driver;
         }
     }
 
