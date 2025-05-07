@@ -18,6 +18,8 @@ This is a Laravel Package for Payment Gateway Integration.
 
 - [zarinpal](https://www.zarinpal.com/)
 
+- [sadad](https://sadadpsp.ir/)
+
 
 ## How to install and config [dizatech/transaction](https://github.com/dizatech/transaction) package?
 

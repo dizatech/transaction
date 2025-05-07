@@ -40,6 +40,13 @@ return [
                 'verifySSL'         => true
             ]
         ],
+        'sadad' => [
+            'constructor'   => [
+                'merchant_id'   => env('SADAD_MERCHANT_ID'),
+                'terminal_id'   => env('SADAD_TERMINAL_ID'),
+                'key'           => env('SADAD_KEY'),
+            ],
+        ],
         'zarinpal' => [
             'constructor' => [
                 'merchantId'    => ''
@@ -60,6 +67,7 @@ return [
         'parsian'   => \Dizatech\Transaction\Drivers\Parsian::class,
         'pasargad'  => \Dizatech\Transaction\Drivers\Pasargad::class,
         'zarinpal'  => \Dizatech\Transaction\Drivers\Zarinpal::class,
+        'sadad'     => \Dizatech\Transaction\Drivers\Sadad::class,
     ],
 
     /*
