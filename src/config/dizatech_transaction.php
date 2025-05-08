@@ -52,6 +52,11 @@ return [
                 'merchantId'    => ''
             ]
         ],
+        'mahamax' => [
+            'constructor'   => [
+                'base_url' => env('MAHAMAX_IPG_URL'),
+            ],
+        ],
     ],
 
     /*
@@ -68,6 +73,7 @@ return [
         'pasargad'  => \Dizatech\Transaction\Drivers\Pasargad::class,
         'zarinpal'  => \Dizatech\Transaction\Drivers\Zarinpal::class,
         'sadad'     => \Dizatech\Transaction\Drivers\Sadad::class,
+        'mahamax'   => \Dizatech\Transaction\Drivers\Mahamax::class,
     ],
 
     /*

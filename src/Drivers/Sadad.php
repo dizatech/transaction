@@ -2,11 +2,8 @@
 
 namespace Dizatech\Transaction\Drivers;
 
-// use Dizatech\PasargadIpg\PasargadIpg;
-
 use Dizatech\SadadIpg\SadadIpg;
 use Dizatech\Transaction\Abstracts\Driver;
-// use stdClass;
 
 class Sadad extends Driver
 {
