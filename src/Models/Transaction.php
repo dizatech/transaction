@@ -28,6 +28,10 @@ class Transaction extends Model
                 return 'زرین پال';
             case 'sadad' :
                 return 'سداد';
+            case 'mahamax' :
+                return 'مهامکس';
+            case 'saman' :
+                return 'سامان';
             default:
                 return $this->driver;
         }

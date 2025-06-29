@@ -57,6 +57,12 @@ return [
                 'base_url' => env('MAHAMAX_IPG_URL'),
             ],
         ],
+        'saman' => [
+            'constructor'   => [
+                'terminal_id'   => env('SAMAN_TERMINAL_ID'),
+                'password'      => env('SAMAN_PASSWORD'),
+            ],
+        ],
     ],
 
     /*
@@ -74,6 +80,7 @@ return [
         'zarinpal'  => \Dizatech\Transaction\Drivers\Zarinpal::class,
         'sadad'     => \Dizatech\Transaction\Drivers\Sadad::class,
         'mahamax'   => \Dizatech\Transaction\Drivers\Mahamax::class,
+        'saman'     => \Dizatech\Transaction\Drivers\Saman::class,
     ],
 
     /*
